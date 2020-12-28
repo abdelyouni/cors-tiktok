@@ -11,7 +11,10 @@ if(!isset($_GET['u'])){
 }
 
 $directUrl = urldecode($_GET['u']);
-
+$userAgent = 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Mobile Safari/537.36';
+if(isset($_GET['d'])){
+    $userAgent = "okhttp";
+}
 $ch = curl_init();
 $headers = array(
     'Range: bytes=0-',
@@ -23,7 +26,7 @@ $options = array(
     CURLOPT_HTTPHEADER     => $headers,
     CURLOPT_FOLLOWLOCATION => true,
     CURLINFO_HEADER_OUT    => true,
-    CURLOPT_USERAGENT      => 'okhttp',
+    CURLOPT_USERAGENT      => $userAgent,
     CURLOPT_ENCODING       => "utf-8",
     CURLOPT_AUTOREFERER    => true,
     CURLOPT_COOKIEJAR      => 'cookie.txt',
