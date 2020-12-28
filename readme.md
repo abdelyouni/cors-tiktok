@@ -9,7 +9,7 @@ This php file is used to bypass tiktok CORS for ajax requests.
 `https://cors-tiktok.herokuapp.com/?u=[TikTok video URL]&d=1`
 
 ## used in :
-[JS Class to download tiktok Videos](https://github.com/abdelyouni/TikGet "JS Class to download tiktok Videos")
+[JS TikTok Downloader](https://github.com/abdelyouni/TikGet "JS-TikTok-Downloader")
 
 ## More ?
 [TikGet - TikTok video downloader php class](https://github.com/abdelyouni/TikGet "TikGet - TikTok video downloader php class")
